@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000; /* Set a background color for the page */
+}
+
+.container {
+    text-align: center;
+    color: #fff; /* Set text color */
+}

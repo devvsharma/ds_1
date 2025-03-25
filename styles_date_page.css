@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('04B_30__.TTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'CustomFont', Arial, sans-serif;
+    background: url('date.gif') center/cover no-repeat;
+    transition: background 0.5s ease;
+}
+
+.container {
+    text-align: center;
+    color: #fff;
+}
+
+h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#backgroundAudio {
+    display: none;
+}
+
+#countdown {
+    font-family: 'CustomFont', Arial, sans-serif;
+    font-size: 30px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.rotate-number {
+    display: inline-block;
+    perspective: 1000px;
+}
+
+.rotate-number div {
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    text-align: center;
+    margin: 0 5px;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50% 10px;
+    animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(360deg);
+    }
+}

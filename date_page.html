@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Confirmed!</title>
+    <link rel="stylesheet" href="styles_date_page.css">
+    <style>
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            transition: opacity 0.5s ease-out;
+            z-index: 9999;
+        }
+
+        #countdown {
+            font-family: 'CustomFont', Arial, sans-serif;
+            font-size: 30px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .rotate-number {
+            display: inline-block;
+            perspective: 1000px;
+        }
+
+        .rotate-number div {
+            width: 1em;
+            height: 1em;
+            line-height: 1em;
+            text-align: center;
+            margin: 0 5px;
+            transform-style: preserve-3d;
+            transform-origin: 50% 50% 10px;
+            animation: rotate 1s infinite linear;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotateX(0deg);
+            }
+            to {
+                transform: rotateX(360deg);
+            }
+        }
+
+        
+
+
+    </style>
+</head>
+
+<body class="date-page">
+
+    <div class="loading-screen" id="loadingScreen">
+        on the way to the next page, thank you for being patience. will be there in a moment ❤️
+    </div>
+
+    <div class="container" id="audioContainer">
+        <h1>Great! It's a date! ❤️</h1>
+        <h2>See you on 31st April</h2>
+        <h3>Place would still be a surprise for you</h3>
+
+        
+
+        <audio id="backgroundAudio">
+            <source src="teenage dream.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+         
+        <!-- Countdown -->
+        <div id="countdown" class="hidden">
+            <div class="rotate-number" id="days"></div>
+            <div class="rotate-number" id="hours"></div>
+            <div class="rotate-number" id="minutes"></div>
+            <div class="rotate-number" id="seconds"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        window.addEventListener('load', function() {
+            var loadingScreen = document.getElementById('loadingScreen');
+            loadingScreen.style.opacity = 0;
+            setTimeout(function() {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        });
+
+        // Start the countdown when the page loads
+        startCountdown();
+    </script>
+</body>
+
+</html>

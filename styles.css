@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('04B_30__.TTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'CustomFont', sans-serif;
+    background-color: #F7C7ED;
+    transition: background-color 1s ease; /* Add a transition for the background-color property */
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'CustomFont';
+}
+
+#noButton {
+    transition: transform 50ms linear; /* Adjust the duration for faster movement */
+}
+
+/* styles.css */
+
+body.transitioning {
+    transition: background-color 0.5s ease; /* Add a transition for the background-color property */
+}
